@@ -1,3 +1,6 @@
+# pip install streamlit
+# steamlit hello
+
 import streamlit as st
 import common
 
