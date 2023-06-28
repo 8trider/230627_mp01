@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 import seaborn as sns
 import streamlit as st
-from pywaffle import Waffle
+
 import plotly.graph_objects as go
 import common
 import pandas as pd
@@ -21,6 +21,7 @@ df_2022 = data_2022[['영화명', '개봉일', '매출액', '매출액점유율'
 df_2021.loc[:,'대표장르']
 gc_2021 = df_2021.loc[:,'대표장르'].value_counts()
 
+from pywaffle import Waffle
 gc_2021_modified = {}
 for key, value in gc_2021.items():
     gc_2021_modified[key] = value // 20
@@ -40,4 +41,3 @@ fig = plt.figure(
     icons ='star'
 )
 plt.show()
-st.pyplot(fig)
