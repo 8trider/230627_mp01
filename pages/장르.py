@@ -19,10 +19,14 @@ data_2022 = common.get_2022()
 common.get_preprocessing(data_2021, data_2022)
 
 # 한글 폰트 설정
-font_path = './NanumGothic.ttf'  # 한글 폰트 파일 경로
-fontprop = fm.FontProperties(fname=font_path)
-plt.rc('font', family=fontprop.get_name())
+font_path = 'NanumGothic.ttf'  # 사용하고자 하는 한글 폰트 파일 경로로 변경해주세요
+fontprop = fm.FontProperties(fname=font_path, size=12)
 
+plt.rc('font', family=fontprop.get_name())
+plt.rcParams['axes.unicode_minus'] = False
+
+# Matplotlib 폰트 캐시 삭제
+subprocess.call('rm -rf ~/.cache/matplotlib', shell=True)
 
 df_2021 = data_2021[['영화명', '개봉일', '매출액', '매출액점유율', '누적매출액', '관객수', '누적관객수', '스크린수', '대표국적', '등급', '대표장르']]
 df_2022 = data_2022[['영화명', '개봉일', '매출액', '매출액점유율', '누적매출액', '관객수', '누적관객수', '스크린수', '대표국적', '등급', '대표장르']]
