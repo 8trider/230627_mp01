@@ -1,5 +1,6 @@
 import streamlit as st
 st.divider()
+st.write("2021")
 tab_menus = ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th"]
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10 = st.tabs(tab_menus)
 tab1.image("2021/01.png")
@@ -12,3 +13,18 @@ tab7.image("2021/07.png")
 tab8.image("2021/08.png")
 tab9.image("2021/09.jpg")
 tab10.image("2021/10.png")
+
+st.divider()
+st.write("2022")
+tab_menus = ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th"]
+tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10 = st.tabs(tab_menus)
+tab1.image("2022/01.jpg")
+tab2.image("2022/02.jpg")
+tab3.image("2022/03.jpg")
+tab4.image("2022/04.jpg")
+tab5.image("2022/05.jpg)
+tab6.image("2022/06.jpg")
+tab7.image("2022/07.jpg")
+tab8.image("2022/08.jpg")
+tab9.image("2022/09.jpg")
+tab10.image("2022/10.jpg")
