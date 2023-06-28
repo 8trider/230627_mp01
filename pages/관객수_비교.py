@@ -52,6 +52,6 @@ fig.update_layout(
             'yanchor': 'top'  # 제목을 상단에 위치
     })
     # 그래프 출력
-fig.show()
+# fig.show()
     # st.pyplot(fig)
 st.plotly_chart(fig)

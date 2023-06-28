@@ -9,7 +9,7 @@ import pandas as pd
 
 common.page_config()
 
-st.title("장르 현활")
+st.title("장르 현황")
 
 data_2021 = common.get_2021()
 data_2022 = common.get_2022()
@@ -20,7 +20,7 @@ df_2022 = data_2022[['영화명', '개봉일', '매출액', '매출액점유율'
 
 df_2021.loc[:,'대표장르']
 gc_2021 = df_2021.loc[:,'대표장르'].value_counts()
-
+pip install pywaffle
 from pywaffle import Waffle
 gc_2021_modified = {}
 for key, value in gc_2021.items():
@@ -41,3 +41,4 @@ fig = plt.figure(
     icons ='star'
 )
 plt.show()
+st.pyplot(fig)
